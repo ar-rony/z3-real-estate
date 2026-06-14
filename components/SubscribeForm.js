@@ -22,13 +22,13 @@ export default function SubscribeForm() {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <section className="py-12 bg-linear-to-r from-blue-50 dark:from-slate-800 to-indigo-50 dark:to-slate-700">
       <div className="max-w-2xl mx-auto px-4 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">আপডেট পেতে সাবস্ক্রাইব করুন</h2>
-        <p className="text-gray-600 mb-6">নতুন প্রপার্টি, অফার ও খবর সরাসরি আপনার ইনবক্সে।</p>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">আপডেট পেতে সাবস্ক্রাইব করুন</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">নতুন প্রপার্টি, অফার ও খবর সরাসরি আপনার ইনবক্সে.</p>
 
         {status === 'success' ? (
-          <div className="bg-green-100 text-green-700 px-4 py-3 rounded-lg font-medium">
+          <div className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-4 py-3 rounded-lg font-medium">
             সাবস্ক্রাইব সফল হয়েছে! চেক করুন আপনার ইমেইল।
           </div>
         ) : (
@@ -43,13 +43,13 @@ export default function SubscribeForm() {
                   setErrorMsg('');
                 }}
                 placeholder="আপনার ইমেইল"
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none placeholder-gray-400 dark:placeholder-gray-500"
               />
             </div>
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 disabled:opacity-70"
+              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 disabled:opacity-70"
             >
               {status === 'submitting' ? (
                 <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">

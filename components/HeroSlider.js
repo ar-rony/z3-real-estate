@@ -47,7 +47,7 @@ export default function HeroSlider({ slides }) {
         </p>
         <Link
           href="/properties"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg"
+          className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg"
         >
           সব প্রপার্টি দেখুন
         </Link>

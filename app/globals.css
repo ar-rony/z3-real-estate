@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
+  /* Light mode defaults */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  --muted: #6b7280;
+  --surface: #f8fafc;
+  --primary: #2563eb;
+  --primary-600: #1e40af;
+  --accent: #06b6d4;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* When `.dark` class is present on html (Tailwind 'class' strategy) */
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --muted: #94a3b8;
+  --surface: #0b1220;
+  --primary: #60a5fa;
+  --primary-600: #2563eb;
+  --accent: #06b6d4;
+  color-scheme: dark;
 }
 
+/* If user prefers dark and no class is set, provide sensible defaults */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light):not(.dark) {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --muted: #94a3b8;
+    --surface: #0b1220;
+    color-scheme: dark;
   }
 }
 
+* {
+  @apply transition-colors duration-200;
+}
+
 body {
-  background: var(--background);
+  background: var(--surface);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Theme-aware overrides for common Tailwind utilities --- */
+/* Text colors */
+.text-gray-900 { color: var(--foreground) !important; }
+.text-gray-800 { color: var(--foreground) !important; }
+.text-gray-700 { color: var(--muted) !important; }
+.text-gray-600 { color: var(--muted) !important; }
+.text-gray-500 { color: var(--muted) !important; }
+.text-gray-400 { color: var(--muted) !important; }
+.text-gray-100 { color: rgba(255,255,255,0.9) !important; }
+
+/* Backgrounds */
+.bg-white { background-color: var(--surface) !important; }
+.bg-gray-50 { background-color: var(--surface) !important; }
+.bg-gray-100 { background-color: var(--surface) !important; }
+.bg-gray-200 { background-color: rgba(0,0,0,0.03) !important; }
+.bg-blue-50 { background-color: rgba(37,99,235,0.06) !important; }
+.bg-blue-600 { background-color: var(--primary) !important; }
+
+/* Dark overrides: when .dark is present on html */
+.dark .bg-white { background-color: var(--surface) !important; }
+.dark .bg-gray-50 { background-color: var(--surface) !important; }
+.dark .bg-gray-100 { background-color: #0b1220 !important; }
+.dark .bg-blue-50 { background-color: rgba(96,165,250,0.06) !important; }
+.dark .bg-blue-600 { background-color: var(--primary-600) !important; }
+.dark .text-gray-900 { color: var(--foreground) !important; }
+.dark .text-gray-700 { color: var(--muted) !important; }
+.dark .text-gray-600 { color: var(--muted) !important; }
+.dark .text-gray-500 { color: var(--muted) !important; }
+
+/* Links and buttons to use primary color */
+a, .btn-primary, button { color: var(--primary); }
+.dark a, .dark .btn-primary, .dark button { color: var(--primary-600); }
+
+/* Ensure borders aren’t too stark in dark */
+.border-gray-200 { border-color: rgba(255,255,255,0.04) !important; }
+.dark .border-gray-200 { border-color: rgba(255,255,255,0.06) !important; }
+
+/* Small helper: ensure modal overlays are visible */
+.dark .bg-black\/50 { background-color: rgba(0,0,0,0.6) !important; }
+
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
 }

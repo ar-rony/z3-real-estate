@@ -13,7 +13,9 @@ export const properties = [
     area: 1800, // বর্গফুট
     description: "সম্পূর্ণ ফার্নিশড, ৩ বেডরুম, ২ বাথরুম, সুইমিং পুল ও জিম সুবিধা।",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
-    featured: true
+    featured: true,
+    phone: "+880-1700-000001",
+    email: "contact1@property.com"
   },
   {
     id: 2,
@@ -28,7 +30,9 @@ export const properties = [
     area: 1200,
     description: "পরিবারের জন্য আদর্শ, কাছেই স্কুল-কলেজ, মার্কেট।",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
-    featured: false
+    featured: false,
+    phone: "+880-1700-000002",
+    email: "contact2@property.com"
   },
   {
     id: 3,
@@ -41,9 +45,11 @@ export const properties = [
     bedrooms: 0,
     bathrooms: 2,
     area: 2500,
-    description: "বাণিজ্যিক এলাকায় আধুনিক অফিস, সব সুবিধা সহ।",
+    description: "বাণিজ্যিক এলাকায় আধুনিক অফিস, সব সুবিধা সহ।",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
-    featured: true
+    featured: true,
+    phone: "+880-1700-000003",
+    email: "contact3@property.com"
   },
   // আরো কয়েকটা প্রপার্টি যোগ করতে পারো
   {
@@ -59,7 +65,9 @@ export const properties = [
     area: 3000,
     description: "নিরিবিলি পরিবেশে দৃষ্টিনন্দন ভিলা, বাগান সহ।",
     image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800",
-    featured: false
+    featured: false,
+    phone: "+880-1700-000004",
+    email: "contact4@property.com"
   },
   {
     id: 5,
@@ -72,9 +80,11 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 3,
     area: 3000,
-    description: "সাগুপতা হাউজিং এ অত্যন্ত মনোরম পরিবেশে আপনার সপ্নের নিবাস গড়তে আজই বুকিং দিন",
+    description: "সাগুপতা হাউজিং এ অত্যন্ত মনোরম পরিবেশে আপনার সপ্নের নিবাস গড়তে আজই বুকিং দিন",
     image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800",
-    featured: true
+    featured: true,
+    phone: "+880-1700-000005",
+    email: "contact5@property.com"
   }
 ];
 

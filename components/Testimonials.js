@@ -29,15 +29,15 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">ক্রেতাদের মতামত</h2>
-          <p className="text-gray-500 mt-2">আমাদের ক্লায়েন্টদের অভিজ্ঞতা</p>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">ক্রেতাদের মতামত</h2>
+          <p className="text-gray-500 dark:text-gray-400 mt-2">আমাদের ক্লাইন্দদের অভিজ্ঞতা</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
-            <div key={t.id} className="bg-white p-6 rounded-2xl shadow-md border">
+            <div key={t.id} className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md dark:shadow-lg border border-gray-200 dark:border-slate-700">
               <div className="flex items-center gap-4 mb-4">
                 <img
                   src={t.avatar}
@@ -45,8 +45,8 @@ export default function Testimonials() {
                   className="w-14 h-14 rounded-full object-cover border-2 border-blue-100"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-800">{t.name}</h4>
-                  <p className="text-sm text-gray-500">{t.role}</p>
+                  <h4 className="font-semibold text-gray-800 dark:text-white">{t.name}</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{t.role}</p>
                 </div>
               </div>
               <div className="flex text-yellow-500 mb-3">

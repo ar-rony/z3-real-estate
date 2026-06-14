@@ -47,7 +47,7 @@ export default function PropertyCounter() {
   };
 
   return (
-    <div ref={sectionRef} className="bg-blue-600 py-12">
+    <div ref={sectionRef} className="bg-blue-600 dark:bg-blue-900 py-12">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
         <div className="flex flex-col items-center">
           <Building2 className="w-8 h-8 mb-2" />

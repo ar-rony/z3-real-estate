@@ -61,20 +61,20 @@ export default function ContactForm({ propertyTitle }) {
   if (submitted) {
     return (
       <div className="text-center py-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mb-4">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">বার্তা পাঠানো হয়েছে!</h3>
-        <p className="text-gray-500">আমরা খুব শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">বার্তা পাঠানো হয়েছে!</h3>
+        <p className="text-gray-500 dark:text-gray-400">আমরা খুব শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8">
+    <div className="bg-white dark:bg-slate-800 backdrop-blur-lg rounded-2xl shadow-xl dark:shadow-2xl border border-gray-100 dark:border-slate-700 p-6 md:p-8">
       <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-800">আগ্রহ প্রকাশ করুন</h3>
-        <p className="text-sm text-gray-500 mt-1">
+        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">আগ্রহ প্রকাশ করুন</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
           <span className="font-medium text-blue-600">“{propertyTitle}”</span> সম্পর্কে জানতে ফর্মটি পূরণ করুন
         </p>
       </div>
@@ -82,18 +82,18 @@ export default function ContactForm({ propertyTitle }) {
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* নাম */}
         <div className="relative">
-          <label className="absolute -top-2.5 right-3 bg-white px-1 text-xs font-medium text-gray-600">
+          <label className="absolute -top-2.5 right-3 bg-white dark:bg-slate-800 px-1 text-xs font-medium text-gray-600 dark:text-gray-400">
             নাম <span className="text-red-400">*</span>
           </label>
-          <div className="flex items-center border border-gray-300 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition">
-            <User className="w-5 h-5 text-gray-400 mr-2" />
+          <div className="flex items-center border border-gray-300 dark:border-slate-600 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 dark:focus-within:ring-blue-400 focus-within:border-blue-500 dark:focus-within:border-blue-400 transition">
+            <User className="w-5 h-5 text-gray-400 dark:text-gray-500 mr-2" />
             <input
               type="text"
               name="name"
               placeholder="আপনার নাম"
               value={formData.name}
               onChange={handleChange}
-              className="w-full outline-none bg-transparent text-gray-700 placeholder-gray-400"
+              className="w-full outline-none bg-transparent text-gray-700 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
             />
           </div>
           {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
@@ -101,18 +101,18 @@ export default function ContactForm({ propertyTitle }) {
 
         {/* ফোন */}
         <div className="relative">
-          <label className="absolute -top-2.5 right-3 bg-white px-1 text-xs font-medium text-gray-600">
+          <label className="absolute -top-2.5 right-3 bg-white dark:bg-slate-800 px-1 text-xs font-medium text-gray-600 dark:text-gray-400">
             মোবাইল নম্বর <span className="text-red-400">*</span>
           </label>
-          <div className="flex items-center border border-gray-300 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition">
-            <Phone className="w-5 h-5 text-gray-400 mr-2" />
+          <div className="flex items-center border border-gray-300 dark:border-slate-600 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 dark:focus-within:ring-blue-400 focus-within:border-blue-500 dark:focus-within:border-blue-400 transition">
+            <Phone className="w-5 h-5 text-gray-400 dark:text-gray-500 mr-2" />
             <input
               type="tel"
               name="phone"
               placeholder="01XXXXXXXXX"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full outline-none bg-transparent text-gray-700 placeholder-gray-400"
+              className="w-full outline-none bg-transparent text-gray-700 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
             />
           </div>
           {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
@@ -120,18 +120,18 @@ export default function ContactForm({ propertyTitle }) {
 
         {/* ইমেইল (অপশনাল) */}
         <div className="relative">
-          <label className="absolute -top-2.5 right-3 bg-white px-1 text-xs font-medium text-gray-600">
-            ইমেইল <span className="text-gray-400">(ঐচ্ছিক)</span>
+          <label className="absolute -top-2.5 right-3 bg-white dark:bg-slate-800 px-1 text-xs font-medium text-gray-600 dark:text-gray-400">
+            ইমেইল <span className="text-gray-400 dark:text-gray-500">(ঐচ্ছিক)</span>
           </label>
-          <div className="flex items-center border border-gray-300 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition">
-            <Mail className="w-5 h-5 text-gray-400 mr-2" />
+          <div className="flex items-center border border-gray-300 dark:border-slate-600 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 dark:focus-within:ring-blue-400 focus-within:border-blue-500 dark:focus-within:border-blue-400 transition">
+            <Mail className="w-5 h-5 text-gray-400 dark:text-gray-500 mr-2" />
             <input
               type="email"
               name="email"
               placeholder="example@mail.com"
               value={formData.email}
               onChange={handleChange}
-              className="w-full outline-none bg-transparent text-gray-700 placeholder-gray-400"
+              className="w-full outline-none bg-transparent text-gray-700 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
             />
           </div>
           {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -139,18 +139,18 @@ export default function ContactForm({ propertyTitle }) {
 
         {/* বার্তা */}
         <div className="relative">
-          <label className="absolute -top-2.5 right-3 bg-white px-1 text-xs font-medium text-gray-600">
+          <label className="absolute -top-2.5 right-3 bg-white dark:bg-slate-800 px-1 text-xs font-medium text-gray-600 dark:text-gray-400">
             আপনার বার্তা <span className="text-red-400">*</span>
           </label>
-          <div className="flex items-start border border-gray-300 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition">
-            <MessageSquare className="w-5 h-5 text-gray-400 mr-2 mt-0.5" />
+          <div className="flex items-start border border-gray-300 dark:border-slate-600 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 dark:focus-within:ring-blue-400 focus-within:border-blue-500 dark:focus-within:border-blue-400 transition">
+            <MessageSquare className="w-5 h-5 text-gray-400 dark:text-gray-500 mr-2 mt-0.5" />
             <textarea
               name="message"
               rows="4"
               placeholder={`"${propertyTitle}" সম্পর্কে আপনার প্রশ্ন লিখুন...`}
               value={formData.message}
               onChange={handleChange}
-              className="w-full outline-none bg-transparent text-gray-700 placeholder-gray-400 resize-none"
+              className="w-full outline-none bg-transparent text-gray-700 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 resize-none"
             />
           </div>
           {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
@@ -160,7 +160,7 @@ export default function ContactForm({ propertyTitle }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3.5 px-6 rounded-xl hover:from-blue-700 hover:to-indigo-700 focus:ring-4 focus:ring-blue-300 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white font-semibold py-3.5 px-6 rounded-xl hover:from-blue-700 hover:to-indigo-700 dark:hover:from-blue-600 dark:hover:to-indigo-600 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-500 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
