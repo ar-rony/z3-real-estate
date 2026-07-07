@@ -42,7 +42,7 @@ export default function Testimonials() {
                 <img
                   src={t.avatar}
                   alt={t.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-blue-100"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-blue-100 dark:border-blue-800"
                 />
                 <div>
                   <h4 className="font-semibold text-gray-800 dark:text-white">{t.name}</h4>
@@ -53,11 +53,11 @@ export default function Testimonials() {
                 {Array.from({ length: 5 }, (_, i) => (
                   <Star
                     key={i}
-                    className={`w-4 h-4 ${i < t.rating ? 'fill-current' : 'text-gray-300'}`}
+                    className={`w-4 h-4 ${i < t.rating ? 'fill-current' : 'text-gray-300 dark:text-gray-600'}`}
                   />
                 ))}
               </div>
-              <p className="text-gray-700 italic">“{t.text}”</p>
+              <p className="text-gray-700 dark:text-gray-300 italic">“{t.text}”</p>
             </div>
           ))}
         </div>

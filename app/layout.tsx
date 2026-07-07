@@ -31,7 +31,7 @@ export default function RootLayout({ children }: any) {
         </Script>
         <ThemeProvider>
           {/* ---------- গ্লাস ন্যাভবার ---------- */}
-          <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/50 dark:bg-slate-900/50 border-b border-white/20 dark:border-slate-700/20 shadow-lg dark:shadow-2xl">
+          <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 border-b border-gray-200/50 dark:border-slate-700/50 shadow-sm dark:shadow-slate-900/50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
             <Link href="/" className="text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-2 hover:scale-105 transition-transform">
               <div className="bg-linear-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
@@ -66,7 +66,7 @@ export default function RootLayout({ children }: any) {
         <main className="py-8">{children}</main>
 
         {/* ---------- ফুটার উইথ উইজেটস ---------- */}
-        <footer className="relative bg-linear-to-b from-gray-900 via-gray-900 to-black dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 text-gray-300 dark:text-gray-400 pt-16 pb-8 overflow-hidden">
+        <footer className="relative bg-linear-to-b from-slate-800 via-slate-900 to-slate-950 dark:from-slate-950 dark:via-slate-900 dark:to-black text-gray-300 dark:text-gray-400 pt-16 pb-8 overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />

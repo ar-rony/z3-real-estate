@@ -27,9 +27,9 @@ export default function HomePage() {
 
       {/* ফিচার্ড প্রপার্টি */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold mb-10 text-center">✨ ফিচার্ড প্রপার্টি</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center text-gray-900 dark:text-white">✨ ফিচার্ড প্রপার্টি</h2>
         {featured.length === 0 ? (
-          <p className="text-gray-500 text-center">কোনো ফিচার্ড প্রপার্টি নেই</p>
+          <p className="text-gray-500 dark:text-gray-400 text-center">কোনো ফিচার্ড প্রপার্টি নেই</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featured.map((property) => (
@@ -40,9 +40,9 @@ export default function HomePage() {
         <div className="text-center mt-10">
           <Link
             href="/properties"
-            className="inline-block border-2 border-blue-600 text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-600 hover:text-white transition"
+            className="inline-block border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 font-semibold py-3 px-8 rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition"
           >
-            আরও প্রপার্টি দেখুন
+            সব প্রপার্টি দেখুন
           </Link>
         </div>
       </section>

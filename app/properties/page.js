@@ -24,7 +24,7 @@ export default function PropertiesPage() {
   }, [search, typeFilter, minPrice, maxPrice]);
 
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className="max-w-7xl mx-auto px-4">
       <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">প্রপার্টি সমূহ</h1>
 
       {/* Filter Section */}
